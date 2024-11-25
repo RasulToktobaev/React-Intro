@@ -1,9 +1,19 @@
-function App() {
+function Header() {
 	return (
-		<>
-			<h1>Hello React</h1>
-		</>
+		<header>
+			<h3>Чукур</h3>
+			<span>Здесь будет время</span>
+		</header>
 	)
 }
 
-export default App
+export default function App() {
+	return (
+		<div>
+			<Header />
+			<main>
+				<h1>Hello React!</h1>
+			</main>
+		</div>
+	)
+}
