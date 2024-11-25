@@ -1,11 +1,4 @@
-function Header() {
-	return (
-		<header>
-			<h3>Чукур</h3>
-			<span>Здесь будет время</span>
-		</header>
-	)
-}
+import Header from './components/Header'
 
 export default function App() {
 	return (
