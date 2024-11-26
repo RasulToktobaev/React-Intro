@@ -1,3 +1,10 @@
+@import url('https://fonts.google.com/share?selection.family=Jaro:opsz@6..72');
+
+
+body{
+  font-family: 'Jaro', sans-serif;
+}
+
 header{
   height: 50px;
   display: flex;
@@ -6,4 +13,15 @@ header{
   align-items: center;
   border-bottom: 1px solid #ccc;
   background: #fafafa;
+}
+
+section ul {
+  list-style: none;
+}
+
+section ul li {
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid gray;;
 }

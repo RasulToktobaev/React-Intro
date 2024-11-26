@@ -1,16 +1,7 @@
+import Button from './components/Button'
 import Header from './components/Header'
+import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
-
-function WayToTeach({ title, description }) {
-	return (
-		<li>
-			<p>
-				<strong>{title}</strong>
-				{description}
-			</p>
-		</li>
-	)
-}
 
 export default function App() {
 	return (
@@ -28,6 +19,10 @@ export default function App() {
 						<WayToTeach {...ways[2]} />
 						<WayToTeach {...ways[3]} />
 					</ul>
+				</section>
+				<section>
+					<h3>Функционал для кнопки из кастомного компонента </h3>
+					<Button />
 				</section>
 			</main>
 		</div>
