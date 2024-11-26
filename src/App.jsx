@@ -24,10 +24,9 @@ export default function App() {
 							title={ways[0].title}
 							description={ways[0].description}
 						/>
-						<WayToTeach
-							title={ways[1].title}
-							description={ways[1].description}
-						/>
+						<WayToTeach {...ways[1]} />
+						<WayToTeach {...ways[2]} />
+						<WayToTeach {...ways[3]} />
 					</ul>
 				</section>
 			</main>
