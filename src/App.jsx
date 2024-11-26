@@ -1,17 +1,12 @@
 import Header from './components/Header'
+import { ways } from './data'
 
-function WayToTeach() {
+function WayToTeach(props) {
 	return (
 		<li>
 			<p>
-				<strong>Индивидуализация процесса</strong>Каждый ученик
-				<br />
-				уникален, поэтому мы разрабатываем <br />
-				персонализированные
-				<br />
-				программы, учитывая уровень подготовки, цели и <br />
-				предпочтения
-				<br />
+				<strong>{props.title}</strong>
+				{props.description}
 			</p>
 		</li>
 	)
@@ -25,9 +20,14 @@ export default function App() {
 				<section>
 					<h3>Наш подход к обучению</h3>
 					<ul>
-						<WayToTeach />
-						<WayToTeach />
-						<WayToTeach />
+						<WayToTeach
+							title={ways[0].title}
+							description={ways[0].description}
+						/>
+						<WayToTeach
+							title={ways[1].title}
+							description={ways[1].description}
+						/>
 					</ul>
 				</section>
 			</main>
