@@ -1,5 +1,5 @@
 import './Button.css'
 
-export default function Button() {
-	return <button className="button">Нажми на меня </button>
+export default function Button({ children }) {
+	return <button className="button">{children}</button>
 }

@@ -22,7 +22,9 @@ export default function App() {
 				</section>
 				<section>
 					<h3>Функционал для кнопки из кастомного компонента </h3>
-					<Button />
+					<Button>Кнопка 1</Button>
+					<Button>Кнопка 2</Button>
+					<Button>Кнопка 3</Button>
 				</section>
 			</main>
 		</div>
