@@ -1,4 +1,4 @@
-import Button from './components/Button'
+import Button from './components/Button/Button'
 import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
