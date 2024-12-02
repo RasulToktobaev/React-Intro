@@ -1,14 +1,8 @@
 import './Button.css'
 
-export default function Button({ children }) {
-	function handleClick() {
-		console.log('handleClick')
-	}
-
-	const handleEnter = () => console.log('handleEnter')
-
+export default function Button({ children, onClick }) {
 	return (
-		<button className="button" onClick={handleClick} onMouseEnter={handleEnter}>
+		<button className="button active" onClick={onClick}>
 			{children}
 		</button>
 	)
