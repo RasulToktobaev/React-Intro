@@ -4,8 +4,8 @@ import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
 
 export default function App() {
-	function hadleClick() {
-		console.log('Кнопка нажата')
+	function hadleClick(type) {
+		console.log('Кнопка нажата', type)
 	}
 	return (
 		<div>
@@ -25,9 +25,9 @@ export default function App() {
 				</section>
 				<section>
 					<h3>Функционал для кнопки из кастомного компонента </h3>
-					<Button onClick={hadleClick}>Кнопка 1</Button>
-					<Button onClick={hadleClick}>Кнопка 2</Button>
-					<Button onClick={hadleClick}>Кнопка 3</Button>
+					<Button onClick={() => hadleClick('way')}>Кнопка 1</Button>
+					<Button onClick={() => hadleClick('easy')}>Кнопка 2</Button>
+					<Button onClick={() => hadleClick('program')}>Кнопка 3</Button>
 				</section>
 			</main>
 		</div>
