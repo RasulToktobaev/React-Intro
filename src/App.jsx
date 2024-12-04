@@ -5,11 +5,11 @@ import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
 
 export default function App() {
-	const [content, setContent] = useState(21)
+	const [content, setContent] = useState('Нажми на кнопку')
 	//let content = 'Нажми на кнопку'
 	function hadleClick(type) {
 		console.log('Кнопка нажата', type)
-		content = type
+		setContent(type)
 	}
 	return (
 		<div>
