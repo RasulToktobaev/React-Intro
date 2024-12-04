@@ -2,13 +2,13 @@ import { useState } from 'react'
 import Button from './components/Button/Button'
 import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
-import { ways } from './data'
+import { differences, ways } from './data'
 
 export default function App() {
 	const [content, setContent] = useState('Нажми на кнопку')
 	//let content = 'Нажми на кнопку'
 	function hadleClick(type) {
-		console.log('Кнопка нажата', type)
+		//console.log('Кнопка нажата', type)
 		setContent(type)
 	}
 	return (
@@ -33,7 +33,7 @@ export default function App() {
 					<Button onClick={() => hadleClick('easy')}>Кнопка 2</Button>
 					<Button onClick={() => hadleClick('program')}>Кнопка </Button>
 
-					<p>{content}</p>
+					<p>{differences[content]}</p>
 				</section>
 			</main>
 		</div>
