@@ -1,10 +1,12 @@
+import { useState } from 'react'
 import Button from './components/Button/Button'
 import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
 import { ways } from './data'
 
 export default function App() {
-	let content = 'Нажми на кнопку'
+	const [content, setContent] = useState(21)
+	//let content = 'Нажми на кнопку'
 	function hadleClick(type) {
 		console.log('Кнопка нажата', type)
 		content = type
