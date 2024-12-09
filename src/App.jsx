@@ -5,11 +5,11 @@ import WayToTeach from './components/WayToTeach'
 import { differences, ways } from './data'
 
 export default function App() {
-	const [content, setContent] = useState('Нажми на кнопку')
+	const [contentType, setContentType] = useState(null)
 	//let content = 'Нажми на кнопку'
 	function hadleClick(type) {
 		//console.log('Кнопка нажата', type)
-		setContent(type)
+		setContentType(type)
 	}
 	return (
 		<div>
@@ -33,7 +33,17 @@ export default function App() {
 					<Button onClick={() => hadleClick('easy')}>Компонент</Button>
 					<Button onClick={() => hadleClick('program')}>Кнопка </Button>
 
-					<p>{differences[content]}</p>
+					{/* {contentType ? (
+						<p>{differences[contentType]}</p>
+					) : (
+						<p>Нажми на кнопку</p>
+					)} */}
+					{/* 
+					{!contentType ? <p>Нажми на кнопку</p> : null}
+					{contentType ? <p>{differences[contentType]}</p> : null} */}
+
+					{!contentType && <p>Нажми на кнопку</p>}
+					{contentType && <p>{differences[contentType]}</p>}
 				</section>
 			</main>
 		</div>
