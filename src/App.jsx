@@ -29,9 +29,24 @@ export default function App() {
 				</section>
 				<section>
 					<h3>Функционал для кнопки из кастомного компонента </h3>
-					<Button onClick={() => hadleClick('way')}>Подход</Button>
-					<Button onClick={() => hadleClick('easy')}>Компонент</Button>
-					<Button onClick={() => hadleClick('program')}>Кнопка </Button>
+					<Button
+						isActive={contentType === 'way'}
+						onClick={() => hadleClick('way')}
+					>
+						Подход
+					</Button>
+					<Button
+						isActive={contentType === 'easy'}
+						onClick={() => hadleClick('easy')}
+					>
+						Компонент
+					</Button>
+					<Button
+						isActive={contentType === 'program'}
+						onClick={() => hadleClick('program')}
+					>
+						Кнопка{' '}
+					</Button>
 
 					{/* {contentType ? (
 						<p>{differences[contentType]}</p>
