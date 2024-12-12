@@ -19,7 +19,7 @@ export default function App() {
 					<h3>Наш подход к обучению</h3>
 					<ul>
 						{ways.map((way) => (
-							<WayToTeach {...way} />
+							<WayToTeach key={way.title} {...way} />
 						))}
 						{/* <WayToTeach
 							title={ways[0].title}
