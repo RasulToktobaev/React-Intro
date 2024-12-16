@@ -6,9 +6,8 @@ import { differences, ways } from './data'
 
 export default function App() {
 	const [contentType, setContentType] = useState(null)
-	//let content = 'Нажми на кнопку'
+
 	function hadleClick(type) {
-		//console.log('Кнопка нажата', type)
 		setContentType(type)
 	}
 	return (
@@ -21,14 +20,6 @@ export default function App() {
 						{ways.map((way) => (
 							<WayToTeach key={way.title} {...way} />
 						))}
-						{/* <WayToTeach
-							title={ways[0].title}
-							description={ways[0].description}
-						/>
-						<WayToTeach {...ways[1]} />
-						<WayToTeach {...ways[2]} />
-						<WayToTeach {...ways[3]} />
-						<WayToTeach {...ways[4]} /> */}
 					</ul>
 				</section>
 				<section>
@@ -51,15 +42,6 @@ export default function App() {
 					>
 						Кнопка{' '}
 					</Button>
-
-					{/* {contentType ? (
-						<p>{differences[contentType]}</p>
-					) : (
-						<p>Нажми на кнопку</p>
-					)} */}
-					{/* 
-					{!contentType ? <p>Нажми на кнопку</p> : null}
-					{contentType ? <p>{differences[contentType]}</p> : null} */}
 
 					{!contentType && <p>Нажми на кнопку</p>}
 					{contentType && <p>{differences[contentType]}</p>}
