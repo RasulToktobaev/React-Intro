@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Button from './components/Button/Button'
 import Header from './components/Header'
-import WayToTeach from './components/WayToTeach'
-import { differences, ways } from './data'
+import TeachingSection from './components/TeachingSection'
+import { differences } from './data'
 
 export default function App() {
 	const [contentType, setContentType] = useState(null)
@@ -14,14 +14,7 @@ export default function App() {
 		<div>
 			<Header />
 			<main>
-				<section>
-					<h3>Наш подход к обучению</h3>
-					<ul>
-						{ways.map((way) => (
-							<WayToTeach key={way.title} {...way} />
-						))}
-					</ul>
-				</section>
+				<TeachingSection />
 				<section>
 					<h3>Функционал для кнопки из кастомного компонента </h3>
 					<Button
